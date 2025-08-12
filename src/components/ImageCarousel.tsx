@@ -11,12 +11,14 @@ interface ImageCarouselProps {
   title?: string;
   subtitle?: string;
   textWidth?: string;
+  height: string;
 }
 
 export default function ImageCarousel({
   images,
   title,
   subtitle,
+  height
 }: ImageCarouselProps) {
   return (
     <div className="w-full mx-auto relative">
@@ -33,7 +35,7 @@ export default function ImageCarousel({
             <img
               src={src}
               alt={`Slide ${index + 1}`}
-              className="w-full h-[600px] object-cover"
+              className={`w-full h-[${height}] object-cover`}
               loading="lazy"
             />
           </SwiperSlide>
@@ -45,11 +47,10 @@ export default function ImageCarousel({
           className={`absolute bottom-4 left-1/2 transform -translate-x-1/2 w-[800px] z-10 text-white text-center px-4`}
         >
           {title && (
-            <h2 className="text-5xl font-barlow-condensed font-bold mb-2 drop-shadow-lg">
-              {title}
+            <h2 className="text-4xl font-semibold mb-5 drop-shadow-sm drop-shadow-black/50" dangerouslySetInnerHTML={{ __html: title }}>
             </h2>
           )}
-          {subtitle && <p className="text-lg drop-shadow-lg">{subtitle}</p>}
+          {subtitle && <p className="text-2xl drop-shadow-lg mb-4">{subtitle}</p>}
         </div>
       )}
     </div>
