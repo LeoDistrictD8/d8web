@@ -2,6 +2,7 @@
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
+import Image from "next/image";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -32,13 +33,15 @@ export default function ImageCarousel({
       >
         {images.map((src, index) => (
           <SwiperSlide key={index} className="relative">
-            <img
-              src={src}
-              alt={`Slide ${index + 1}`}
-              style={{ height: height }}
-              className="w-full object-cover"
-              loading="lazy"
-            />
+            <div style={{ height: height }} className="relative w-full">
+              <Image
+                src={src}
+                alt={`Slide ${index + 1}`}
+                fill
+                className="object-cover"
+                loading="lazy"
+              />
+            </div>
           </SwiperSlide>
         ))}
       </Swiper>

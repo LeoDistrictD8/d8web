@@ -258,13 +258,13 @@ export default function Home() {
                 A Message from the District President
               </h1>
               <p className="text-sm">
-                "As Leos, we are the change we wish to see in the world. Leo
-                District 306 D8 is not just a community it's a family of
+                &ldquo;As Leos, we are the change we wish to see in the world. Leo
+                District 306 D8 is not just a community it&apos;s a family of
                 changemakers. Let us ignite passion, embrace service, and leave
                 a legacy that inspires generations. As Leos, we are the change
                 we wish to see in the world. Leo District 306 D8 is not just a
-                community it's a family of changemakers. Let us ignite passion,
-                embrace service, and leave a legacy that inspires generations."
+                community it&apos;s a family of changemakers. Let us ignite passion,
+                embrace service, and leave a legacy that inspires generations.&rdquo;
               </p>
               <div className="col-span-1 w-full flex justify-end text-sm mt-4 md:mt-6">
                 <div className="flex flex-col">
