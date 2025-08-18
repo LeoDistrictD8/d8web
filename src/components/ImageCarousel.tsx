@@ -35,7 +35,8 @@ export default function ImageCarousel({
             <img
               src={src}
               alt={`Slide ${index + 1}`}
-              className={`w-full h-[${height}] object-cover`}
+              style={{ height: height }}
+              className="w-full object-cover"
               loading="lazy"
             />
           </SwiperSlide>
@@ -44,13 +45,13 @@ export default function ImageCarousel({
 
       {(title || subtitle) && (
         <div
-          className={`absolute bottom-4 left-1/2 transform -translate-x-1/2 w-[800px] z-10 text-white text-center px-4`}
+          className={`absolute bottom-2 sm:bottom-4 left-1/2 transform -translate-x-1/2 w-[90%] sm:w-[600px] lg:w-[800px] z-10 text-white text-center px-2 sm:px-4`}
         >
           {title && (
-            <h2 className="text-4xl font-semibold mb-5 drop-shadow-sm drop-shadow-black/50" dangerouslySetInnerHTML={{ __html: title }}>
+            <h2 className="text-lg sm:text-2xl md:text-3xl lg:text-4xl font-semibold mb-2 sm:mb-3 md:mb-5 drop-shadow-sm drop-shadow-black/50" dangerouslySetInnerHTML={{ __html: title }}>
             </h2>
           )}
-          {subtitle && <p className="text-2xl drop-shadow-lg mb-4">{subtitle}</p>}
+          {subtitle && <p className="text-sm sm:text-lg md:text-xl lg:text-2xl drop-shadow-lg mb-2 sm:mb-3 md:mb-4">{subtitle}</p>}
         </div>
       )}
     </div>
