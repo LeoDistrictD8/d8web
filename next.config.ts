@@ -6,6 +6,9 @@ const nextConfig: NextConfig = {
   output: "export",
   basePath: isProd ? "/d8web" : "",
   assetPrefix: isProd ? "/d8web" : "",
+  images: {
+    unoptimized: true,
+  },
 };
 
 export default nextConfig;
