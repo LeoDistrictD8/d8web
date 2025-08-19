@@ -1,14 +1,8 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  output: "export",
-  images: {
-    unoptimized: true, 
-  },
-  basePath: "/d8web",      
-  assetPrefix: "/d8web/",     
-  eslint: {
-    ignoreDuringBuilds: true,  
-  },
+import type { NextConfig } from 'next';
+
+const nextConfig: NextConfig = {
+  output: 'export',
+  basePath: process.env.PAGES_BASE_PATH,
 };
 
-module.exports = nextConfig;
+export default nextConfig;
