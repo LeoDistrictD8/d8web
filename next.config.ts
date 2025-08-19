@@ -9,6 +9,9 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true,
   },
+  publicRuntimeConfig: {
+    basePath: isProd ? '/d8web' : '',
+  },
 };
 
 export default nextConfig;

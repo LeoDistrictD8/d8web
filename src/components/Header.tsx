@@ -4,15 +4,18 @@ import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Menu, X } from "lucide-react";
+import getConfig from "next/config";
+const { publicRuntimeConfig } = getConfig();
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const basePath = publicRuntimeConfig?.basePath || "";
 
   return (
     <div className="w-full text-white bg-primary flex flex-col">
       <div className="flex px-4 sm:px-6 md:px-10 justify-between items-center">
         <Image
-          src="/district_logo.png"
+          src={`${basePath}/district_logo.png`}
           width={35}
           height={35}
           alt="Leo District Logo"

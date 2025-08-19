@@ -6,6 +6,8 @@ import Image from "next/image";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import getConfig from "next/config";
+const { publicRuntimeConfig } = getConfig();
 
 interface ImageCarouselProps {
   images: string[];
@@ -19,8 +21,9 @@ export default function ImageCarousel({
   images,
   title,
   subtitle,
-  height
+  height,
 }: ImageCarouselProps) {
+  const basePath = publicRuntimeConfig?.basePath || "";
   return (
     <div className="w-full mx-auto relative">
       <Swiper
@@ -35,7 +38,7 @@ export default function ImageCarousel({
           <SwiperSlide key={index} className="relative">
             <div style={{ height: height }} className="relative w-full">
               <Image
-                src={src}
+                src={`${basePath}/${src}`}
                 alt={`Slide ${index + 1}`}
                 fill
                 className="object-cover"
@@ -51,10 +54,16 @@ export default function ImageCarousel({
           className={`absolute bottom-2 sm:bottom-4 left-1/2 transform -translate-x-1/2 w-[90%] sm:w-[600px] lg:w-[800px] z-10 text-white text-center px-2 sm:px-4`}
         >
           {title && (
-            <h2 className="text-lg sm:text-2xl md:text-3xl lg:text-4xl font-semibold mb-2 sm:mb-3 md:mb-5 drop-shadow-sm drop-shadow-black/50" dangerouslySetInnerHTML={{ __html: title }}>
-            </h2>
+            <h2
+              className="text-lg sm:text-2xl md:text-3xl lg:text-4xl font-semibold mb-2 sm:mb-3 md:mb-5 drop-shadow-sm drop-shadow-black/50"
+              dangerouslySetInnerHTML={{ __html: title }}
+            ></h2>
           )}
-          {subtitle && <p className="text-sm sm:text-lg md:text-xl lg:text-2xl drop-shadow-lg mb-2 sm:mb-3 md:mb-4">{subtitle}</p>}
+          {subtitle && (
+            <p className="text-sm sm:text-lg md:text-xl lg:text-2xl drop-shadow-lg mb-2 sm:mb-3 md:mb-4">
+              {subtitle}
+            </p>
+          )}
         </div>
       )}
     </div>

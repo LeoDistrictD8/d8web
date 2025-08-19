@@ -4,7 +4,11 @@ import Footer from "@/components/Footer";
 import { getImagePaths } from "@/utils/utils";
 import Image from "next/image";
 
+import getConfig from "next/config";
+const { publicRuntimeConfig } = getConfig();
+
 export default function Home() {
+  const basePath = publicRuntimeConfig?.basePath || "";
   async function HomePageWrapper({
     path,
     title,
@@ -39,7 +43,9 @@ export default function Home() {
         <div className="w-full">
           {/* Intro Section */}
           <div>
-            <h1 className="text-2xl sm:text-3xl md:text-4xl text-center pb-6 sm:pb-8 md:pb-10">Leo District 306 D8</h1>
+            <h1 className="text-2xl sm:text-3xl md:text-4xl text-center pb-6 sm:pb-8 md:pb-10">
+              Leo District 306 D8
+            </h1>
             <p className="text-justify text-sm sm:text-base">
               Leo District 306 D8 is a vibrant and forward-thinking youth
               movement under the umbrella of Lions Clubs International, the
@@ -84,7 +90,9 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-5 mt-16 sm:mt-20 md:mt-24 gap-6 lg:gap-0">
             <div className="flex flex-col justify-between lg:col-span-3 space-y-6 lg:space-y-0">
               <div className="">
-                <h2 className="text-xl sm:text-2xl font-semibold mb-3 sm:mb-4">Our Vision</h2>
+                <h2 className="text-xl sm:text-2xl font-semibold mb-3 sm:mb-4">
+                  Our Vision
+                </h2>
                 <p className="mb-3 sm:mb-4 font-semibold text-sm sm:text-base">
                   To build a generation of passionate youth who lead with
                   empathy and serve with purpose.
@@ -99,7 +107,9 @@ export default function Home() {
                 </p>
               </div>
               <div className="">
-                <h2 className="text-xl sm:text-2xl font-semibold mb-3 sm:mb-4">Our Mission</h2>
+                <h2 className="text-xl sm:text-2xl font-semibold mb-3 sm:mb-4">
+                  Our Mission
+                </h2>
                 <p className="mb-3 sm:mb-4 font-semibold text-sm sm:text-base">
                   To provide the youth of District 306 D8 with platforms to
                   grow, connect, and inspire change through meaningful service
@@ -118,7 +128,7 @@ export default function Home() {
             </div>
             <div className="lg:col-span-2 flex justify-center lg:justify-end lg:pr-10 items-center h-full">
               <Image
-                src={"/md_map.png"}
+                src={`${basePath}/md_map.png`}
                 alt="MD Map"
                 width={260}
                 height={260}
@@ -135,7 +145,7 @@ export default function Home() {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-2 grid-rows-auto lg:grid-rows-6 h-auto lg:h-[520px]">
               <div className="col-span-1 sm:col-span-2 lg:col-span-2 row-span-1 sm:row-span-2 lg:row-span-4">
                 <Image
-                  src={"/carousel_images/carouselImage1.jpg"}
+                  src={`${basePath}/carousel_images/carouselImage1.jpg`}
                   alt="MD Map"
                   width={160}
                   height={80}
@@ -144,7 +154,9 @@ export default function Home() {
               </div>
               <div className="bg-secondary col-span-1 row-span-1 sm:row-span-2 px-3 sm:px-5 py-3 sm:py-5">
                 <div className="text-white text-xs sm:text-sm text-center">
-                  <h2 className="text-center font-semibold mb-1 text-sm sm:text-base">Region B</h2>
+                  <h2 className="text-center font-semibold mb-1 text-sm sm:text-base">
+                    Region B
+                  </h2>
                   <ul className="">
                     <li className="text-center">Leo Club of Baddegama</li>
                     <li className="text-center">Leo Club of Baddegama</li>
@@ -156,7 +168,7 @@ export default function Home() {
               </div>
               <div className="col-span-1 row-span-1 sm:row-span-2 lg:row-span-4">
                 <Image
-                  src={"/carousel_images/carouselImage1.jpg"}
+                  src={`${basePath}/carousel_images/carouselImage1.jpg`}
                   alt="MD Map"
                   width={160}
                   height={80}
@@ -165,7 +177,7 @@ export default function Home() {
               </div>
               <div className="col-span-1 row-span-1 sm:row-span-2 lg:row-span-4">
                 <Image
-                  src={"/carousel_images/carouselImage1.jpg"}
+                  src={`${basePath}/carousel_images/carouselImage1.jpg`}
                   alt="MD Map"
                   width={180}
                   height={1160}
@@ -184,7 +196,9 @@ export default function Home() {
               </div>
               <div className="bg-secondary col-span-1 row-span-1 sm:row-span-2 px-3 sm:px-5 py-3 sm:py-5">
                 <div className="text-white text-xs sm:text-sm text-center">
-                  <h2 className="text-center font-semibold text-sm sm:text-base">Region A</h2>
+                  <h2 className="text-center font-semibold text-sm sm:text-base">
+                    Region A
+                  </h2>
                   <ul className="">
                     <li className="text-center">Leo Club of Baddegama</li>
                     <li className="text-center">Leo Club of Baddegama</li>
@@ -210,7 +224,9 @@ export default function Home() {
           {/* Core Pillers */}
           <div className="bg-accent2 mt-12 sm:mt-16 px-6 sm:px-12 py-6 sm:py-8 flex flex-col items-center">
             <h2 className="font-semibold text-primarytextColor">Our Pillers</h2>
-            <h1 className="text-lg sm:text-xl font-semibold mt-1">Our Core Pillers</h1>
+            <h1 className="text-lg sm:text-xl font-semibold mt-1">
+              Our Core Pillers
+            </h1>
             <div className="flex flex-col sm:flex-row gap-4 sm:gap-5 mt-4 sm:mt-5 w-full sm:w-auto">
               <div className="bg-accent px-5 py-5 flex flex-col items-center">
                 <h1 className="font-semibold text-sm mb-2">
@@ -258,13 +274,14 @@ export default function Home() {
                 A Message from the District President
               </h1>
               <p className="text-sm">
-                &ldquo;As Leos, we are the change we wish to see in the world. Leo
-                District 306 D8 is not just a community it&apos;s a family of
-                changemakers. Let us ignite passion, embrace service, and leave
-                a legacy that inspires generations. As Leos, we are the change
-                we wish to see in the world. Leo District 306 D8 is not just a
-                community it&apos;s a family of changemakers. Let us ignite passion,
-                embrace service, and leave a legacy that inspires generations.&rdquo;
+                &ldquo;As Leos, we are the change we wish to see in the world.
+                Leo District 306 D8 is not just a community it&apos;s a family
+                of changemakers. Let us ignite passion, embrace service, and
+                leave a legacy that inspires generations. As Leos, we are the
+                change we wish to see in the world. Leo District 306 D8 is not
+                just a community it&apos;s a family of changemakers. Let us
+                ignite passion, embrace service, and leave a legacy that
+                inspires generations.&rdquo;
               </p>
               <div className="col-span-1 w-full flex justify-end text-sm mt-4 md:mt-6">
                 <div className="flex flex-col">
@@ -275,7 +292,7 @@ export default function Home() {
             </div>
             <div className="pl-0 md:pl-8 h-[220px] sm:h-[260px] md:h-[300px] order-1 md:order-2">
               <Image
-                src={"/carousel_images/carouselImage1.jpg"}
+                src={`${basePath}/carousel_images/carouselImage1.jpg`}
                 alt="MD Map"
                 width={600}
                 height={600}
