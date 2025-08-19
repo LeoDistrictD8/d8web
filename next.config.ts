@@ -1,8 +1,11 @@
-import type { NextConfig } from 'next';
+import type { NextConfig } from "next";
+
+const isProd = process.env.NODE_ENV === "production";
 
 const nextConfig: NextConfig = {
-  output: 'export',
-  basePath: process.env.PAGES_BASE_PATH,
+  output: "export",
+  basePath: isProd ? "/d8web" : "",
+  assetPrefix: isProd ? "/d8web" : "",
 };
 
 export default nextConfig;
