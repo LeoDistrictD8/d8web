@@ -4,11 +4,9 @@ import Footer from "@/components/Footer";
 import { getImagePaths } from "@/utils/utils";
 import Image from "next/image";
 
-import getConfig from "next/config";
-const { publicRuntimeConfig } = getConfig();
 
 export default function Home() {
-  const basePath = publicRuntimeConfig?.basePath || "";
+  const basePath = process.env.NODE_ENV === "production" ? '/d8web' : '';
   async function HomePageWrapper({
     path,
     title,

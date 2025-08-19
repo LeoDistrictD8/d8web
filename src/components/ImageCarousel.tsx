@@ -6,8 +6,6 @@ import Image from "next/image";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import getConfig from "next/config";
-const { publicRuntimeConfig } = getConfig();
 
 interface ImageCarouselProps {
   images: string[];
@@ -23,7 +21,7 @@ export default function ImageCarousel({
   subtitle,
   height,
 }: ImageCarouselProps) {
-  const basePath = publicRuntimeConfig?.basePath || "";
+  const basePath = process.env.NODE_ENV === "production" ? '/d8web' : '';
   return (
     <div className="w-full mx-auto relative">
       <Swiper

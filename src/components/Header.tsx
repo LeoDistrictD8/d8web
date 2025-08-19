@@ -4,12 +4,10 @@ import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Menu, X } from "lucide-react";
-import getConfig from "next/config";
-const { publicRuntimeConfig } = getConfig();
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const basePath = publicRuntimeConfig?.basePath || "";
+  const basePath = process.env.NODE_ENV === "production" ? '/d8web' : '';
 
   return (
     <div className="w-full text-white bg-primary flex flex-col">
