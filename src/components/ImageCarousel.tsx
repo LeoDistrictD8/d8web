@@ -21,7 +21,6 @@ export default function ImageCarousel({
   subtitle,
   height,
 }: ImageCarouselProps) {
-  const basePath = process.env.NODE_ENV === "production" ? '/d8web' : '';
   return (
     <div className="w-full mx-auto relative">
       <Swiper
@@ -36,7 +35,7 @@ export default function ImageCarousel({
           <SwiperSlide key={index} className="relative">
             <div style={{ height: height }} className="relative w-full">
               <Image
-                src={`${basePath}/${src}`}
+                src={`${src}`}
                 alt={`Slide ${index + 1}`}
                 fill
                 className="object-cover"

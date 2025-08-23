@@ -4,9 +4,7 @@ import Footer from "@/components/Footer";
 import { getImagePaths } from "@/utils/utils";
 import Image from "next/image";
 
-
 export default function Home() {
-  const basePath = process.env.NODE_ENV === "production" ? '/d8web' : '';
   async function HomePageWrapper({
     path,
     title,
@@ -33,7 +31,7 @@ export default function Home() {
     <div className="">
       <Header />
       <HomePageWrapper
-        height="300px"
+        height="500px"
         path="carousel_images"
         title={`Leading with Humanity <br/> Serving with Pride`}
       />
@@ -126,7 +124,7 @@ export default function Home() {
             </div>
             <div className="lg:col-span-2 flex justify-center lg:justify-end lg:pr-10 items-center h-full">
               <Image
-                src={`${basePath}/md_map.png`}
+                src={`/md_map.png`}
                 alt="MD Map"
                 width={260}
                 height={260}
@@ -143,33 +141,43 @@ export default function Home() {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-2 grid-rows-auto lg:grid-rows-6 h-auto lg:h-[520px]">
               <div className="col-span-1 sm:col-span-2 lg:col-span-2 row-span-1 sm:row-span-2 lg:row-span-4">
                 <Image
-                  src={`${basePath}/carousel_images/carouselImage1.jpg`}
+                  src={`/carousel_images/carouselImage1.jpg`}
                   alt="MD Map"
                   width={160}
                   height={80}
                   className="w-full h-32 sm:h-40 lg:h-full object-cover"
                 />
               </div>
-              <div className="bg-secondary col-span-1 row-span-1 sm:row-span-2 px-3 sm:px-5 py-3 sm:py-5">
-                <div className="text-white text-xs sm:text-sm text-center">
-                  <h2 className="text-center font-semibold mb-1 text-sm sm:text-base">
+              <div className="bg-secondary col-span-1 row-span-1 sm:row-span-2 px-3 sm:px-5 py-1 sm:py-3">
+                <div className="text-white text-xs text-center">
+                  <h2 className="text-center font-semibold mb-1 text-sm">
                     Region A
                   </h2>
                   <ul className="">
-                    <li className="text-center">Leo Club of University of Ruhunaa</li>
-                    <li className="text-center">Leo Club of Sujatha Vidyalaya Matara</li>
+                    <li className="text-center">
+                      Leo Club of University of Ruhunaa
+                    </li>
+                    <li className="text-center">
+                      Leo Club of Sujatha Vidyalaya Matara
+                    </li>
                     <li className="text-center">Leo Club of Rahula College</li>
-                    <li className="text-center">Leo Club of Unawatuna Diamond Stars</li>
-                    <li className="text-center">Leo Club of Centennial Richmond College</li>
+                    <li className="text-center">
+                      Leo Club of Unawatuna Diamond Stars
+                    </li>
+                    <li className="text-center">
+                      Leo Club of Centennial Richmond College
+                    </li>
                     <li className="text-center">Leo Club of Baddegama</li>
                     <li className="text-center">Leo Club of Southern Metro</li>
-                    <li className="text-center">Leo Club of St Servatius College Matara</li>
+                    <li className="text-center">
+                      Leo Club of St Servatius College Matara
+                    </li>
                   </ul>
                 </div>
               </div>
               <div className="col-span-1 row-span-1 sm:row-span-2 lg:row-span-4">
                 <Image
-                  src={`${basePath}/carousel_images/carouselImage2.jpg`}
+                  src={`/carousel_images/carouselImage2.jpg`}
                   alt="MD Map"
                   width={160}
                   height={80}
@@ -178,7 +186,7 @@ export default function Home() {
               </div>
               <div className="col-span-1 row-span-1 sm:row-span-2 lg:row-span-4">
                 <Image
-                  src={`${basePath}/carousel_images/carouselImage1.jpg`}
+                  src={`/carousel_images/carouselImage3.jpg`}
                   alt="MD Map"
                   width={180}
                   height={1160}
@@ -195,26 +203,32 @@ export default function Home() {
                   Meet Our Clubs
                 </div> */}
               </div>
-              <div className="bg-secondary col-span-1 row-span-1 sm:row-span-2 px-3 sm:px-5 py-3 sm:py-5">
-                <div className="text-white text-xs sm:text-sm text-center">
-                  <h2 className="text-center font-semibold text-sm sm:text-base">
+              <div className="bg-secondary col-span-1 row-span-1 sm:row-span-2 px-3 sm:px-5 py-1 sm:py-3">
+                <div className="text-white text-xs text-center">
+                  <h2 className="text-center font-semibold text-sm">
                     Region B
                   </h2>
                   <ul className="">
-                   <li className="text-center">Leo Club of Matara Nilwala</li>
-<                 li className="text-center">Leo Club of St Thomas's College Matara</li>
-                  <li className="text-center">Leo Club of Galle Fort</li>
-<li className="text-center">Leo Club of Deniyaya</li>
-<li className="text-center">Leo Club of Kataragama Bogahapelessa</li>
-<li className="text-center">Leo Club of Uragasmanhandiya</li>
-<li className="text-center">Leo Club of Galle</li>
-<li className="text-center">Leo Club of Matara Marians</li>
+                    <li className="text-center">Leo Club of Matara Nilwala</li>
+                    <li className="text-center">
+                      Leo Club of St Thomas's College Matara
+                    </li>
+                    <li className="text-center">Leo Club of Galle Fort</li>
+                    <li className="text-center">Leo Club of Deniyaya</li>
+                    <li className="text-center">
+                      Leo Club of Kataragama Bogahapelessa
+                    </li>
+                    <li className="text-center">
+                      Leo Club of Uragasmanhandiya
+                    </li>
+                    <li className="text-center">Leo Club of Galle</li>
+                    <li className="text-center">Leo Club of Matara Marians</li>
                   </ul>
                 </div>
               </div>
 
               <div className="bg-secondary col-span-1 row-span-1 sm:row-span-2">
-                <p className="text-white text-xs sm:text-sm px-2 text-center py-4 sm:py-5">
+                <p className="text-white text-xs px-2 text-center py-4 sm:py-5">
                   Leo District 306 D8 is home to a dynamic and diverse community
                   of Leo Clubs united by a shared passion for service and
                   leadership. Each club operates with its unique spirit and
@@ -226,7 +240,7 @@ export default function Home() {
           </div>
 
           {/* Core Pillers */}
-          <div className="bg-accent2 mt-12 sm:mt-16 px-6 sm:px-12 py-6 sm:py-8 flex flex-col items-center">
+          <div className="bg-blue-200  rounded-2xl mt-12 sm:mt-16 px-6 sm:px-12 py-6 sm:py-8 flex flex-col items-center">
             <h2 className="font-semibold text-primarytextColor">Our Pillers</h2>
             <h1 className="text-lg sm:text-xl font-semibold mt-1">
               Our Core Pillers
@@ -294,13 +308,13 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className="pl-0 md:pl-8 h-[220px] sm:h-[260px] md:h-[300px] order-1 md:order-2">
+            <div className="pl-0 md:pl-8 h-[220px] sm:h-[260px] md:h-[300px] order-1 md:order-2 flex justify-center">
               <Image
-                src={`${basePath}/district_logo.png`}
+                src={`/district_logo.png`}
                 alt="MD Map"
-                width={500}
+                width={300}
                 height={400}
-                className="w-half h-half object-cover rounded-2xl"
+                className="object-cover rounded-2xl"
               />
             </div>
           </div>

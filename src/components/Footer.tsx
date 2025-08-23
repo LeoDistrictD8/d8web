@@ -2,12 +2,12 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="bg-white text-gray-800 py-8 mt-16 border-t border-gray-200">
+    <footer className="bg-white text-gray-800 pt-8 mt-16 border-t border-gray-200">
       <div className="container mx-auto px-4">
         <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center mb-8">
           {/* Left Section - Logo */}
           <div className="flex items-center mb-6 lg:mb-0">
-            <p className="w-full md:w-[80%] text-sm px-4 text-justify">
+            <p className="w-full text-sm px-4 text-justify">
               Leo District 306 D8 is a vibrant youth movement under Lions Clubs
               International, committed to empowering young individuals to become
               leaders through community service and personal development. As the
@@ -17,12 +17,12 @@ export default function Footer() {
             </p>
           </div>
 
-          {/* Right Section - Email Subscription */}
+{/* 
           <div className="flex flex-col items-center lg:items-end">
 
-            {/* Social Media Icons */}
+
             <div className="flex items-center space-x-4">
-              {/* Facebook */}
+
               <Link
                 href="#"
                 className="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center hover:bg-blue-600 transition-colors duration-200"
@@ -31,7 +31,7 @@ export default function Footer() {
                 <span className="text-white font-bold text-sm">f</span>
               </Link>
 
-              {/* Instagram */}
+
               <Link
                 href="#"
                 className="w-10 h-10 bg-gradient-to-br from-orange-400 via-pink-500 to-purple-600 rounded-full flex items-center justify-center hover:opacity-80 transition-opacity duration-200"
@@ -46,7 +46,7 @@ export default function Footer() {
                 </svg>
               </Link>
 
-              {/* WhatsApp */}
+
               <Link
                 href="#"
                 className="w-10 h-10 bg-green-500 rounded-full flex items-center justify-center hover:bg-green-600 transition-colors duration-200"
@@ -61,7 +61,7 @@ export default function Footer() {
                 </svg>
               </Link>
 
-              {/* LinkedIn */}
+
               <Link
                 href="#"
                 className="w-10 h-10 bg-blue-700 rounded-full flex items-center justify-center hover:bg-blue-800 transition-colors duration-200"
@@ -70,7 +70,7 @@ export default function Footer() {
                 <span className="text-white font-bold text-xs">in</span>
               </Link>
 
-              {/* Telegram */}
+
               <Link
                 href="#"
                 className="w-10 h-10 bg-blue-400 rounded-full flex items-center justify-center hover:bg-blue-500 transition-colors duration-200"
@@ -85,14 +85,14 @@ export default function Footer() {
                 </svg>
               </Link>
             </div>
-          </div>
+          </div> */}
         </div>
 
         {/* Blue Line Separator */}
-        <div className="w-full h-0.5 bg-blue-500 mx-auto"></div>
+        {/* <div className="w-full h-0.5 bg-blue-300 mx-auto"></div> */}
 
         {/* Copyright Text */}
-        <div className="text-center mt-6 text-sm text-gray-600">
+        <div className="text-center my-2 text-xs text-gray-600">
           <p>&copy; 2025 Leo District 306 D8. All rights reserved.</p>
         </div>
       </div>

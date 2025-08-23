@@ -13,7 +13,7 @@ export default function Header() {
     <div className="w-full text-white bg-primary flex flex-col">
       <div className="flex px-4 sm:px-6 md:px-10 justify-between items-center">
         <Image
-          src={`${basePath}/district_logo.png`}
+          src={`/district_logo.png`}
           width={35}
           height={35}
           alt="Leo District Logo"
@@ -32,15 +32,18 @@ export default function Header() {
 
             {/* Nav links - desktop */}
             <ul className="hidden md:flex gap-3 lg:gap-5">
-              <li>
+              <li className="font-sans">
+                Leo District 306 D8
+              </li>
+              {/* <li>
                 <Link
                   href="/"
                   className="relative inline-block text-sm lg:text-base after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-white after:transition-all after:duration-300 hover:after:w-full"
                 >
                   Home
                 </Link>
-              </li>
-              <li>
+              </li> */}
+              {/* <li>
                 <Link
                   href="/leadership"
                   className="relative inline-block text-sm lg:text-base after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-white after:transition-all after:duration-300 hover:after:w-full"
@@ -71,7 +74,7 @@ export default function Header() {
                 >
                   Gallery
                 </Link>
-              </li>
+              </li> */}
             </ul>
           </div>
         </nav>
