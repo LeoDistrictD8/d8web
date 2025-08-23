@@ -84,7 +84,7 @@ export default function Home() {
           {/* Mission & Vision */}
 
           <div className="grid grid-cols-1 lg:grid-cols-5 mt-16 sm:mt-20 md:mt-24 gap-6 lg:gap-0">
-            <div className="flex flex-col justify-between lg:col-span-3 space-y-6 lg:space-y-0">
+            <div className="flex flex-col justify-center lg:col-span-3 space-y-6 lg:space-y-0">
               <div className="">
                 <h2 className="text-xl sm:text-2xl font-semibold mb-3 sm:mb-4">
                   Our Vision
@@ -102,7 +102,7 @@ export default function Home() {
                   into impactful service.
                 </p>
               </div>
-              <div className="">
+              <div className="md:mt-20">
                 <h2 className="text-xl sm:text-2xl font-semibold mb-3 sm:mb-4">
                   Our Mission
                 </h2>
