@@ -69,15 +69,15 @@ export default function Home() {
                 <p className="text-lg sm:text-xl">Regions</p>
               </div>
               <div className="flex flex-col items-center">
-                <h2 className="text-2xl sm:text-3xl">150+</h2>
+                <h2 className="text-2xl sm:text-3xl">3+</h2>
                 <p className="text-lg sm:text-xl">Projects</p>
               </div>
               <div className="flex flex-col items-center">
-                <h2 className="text-2xl sm:text-3xl">1200</h2>
+                <h2 className="text-2xl sm:text-3xl">500</h2>
                 <p className="text-lg sm:text-xl">Leos</p>
               </div>
               <div className="flex flex-col items-center">
-                <h2 className="text-2xl sm:text-3xl">32</h2>
+                <h2 className="text-2xl sm:text-3xl">17</h2>
                 <p className="text-lg sm:text-xl">Clubs</p>
               </div>
             </div>
@@ -153,20 +153,23 @@ export default function Home() {
               <div className="bg-secondary col-span-1 row-span-1 sm:row-span-2 px-3 sm:px-5 py-3 sm:py-5">
                 <div className="text-white text-xs sm:text-sm text-center">
                   <h2 className="text-center font-semibold mb-1 text-sm sm:text-base">
-                    Region B
+                    Region A
                   </h2>
                   <ul className="">
+                    <li className="text-center">Leo Club of University of Ruhunaa</li>
+                    <li className="text-center">Leo Club of Sujatha Vidyalaya Matara</li>
+                    <li className="text-center">Leo Club of Rahula College</li>
+                    <li className="text-center">Leo Club of Unawatuna Diamond Stars</li>
+                    <li className="text-center">Leo Club of Centennial Richmond College</li>
                     <li className="text-center">Leo Club of Baddegama</li>
-                    <li className="text-center">Leo Club of Baddegama</li>
-                    <li className="text-center">Leo Club of Baddegama</li>
-                    <li className="text-center">Leo Club of Baddegama</li>
-                    <li className="text-center">Leo Club of Baddegama</li>
+                    <li className="text-center">Leo Club of Southern Metro</li>
+                    <li className="text-center">Leo Club of St Servatius College Matara</li>
                   </ul>
                 </div>
               </div>
               <div className="col-span-1 row-span-1 sm:row-span-2 lg:row-span-4">
                 <Image
-                  src={`${basePath}/carousel_images/carouselImage1.jpg`}
+                  src={`${basePath}/carousel_images/carouselImage2.jpg`}
                   alt="MD Map"
                   width={160}
                   height={80}
@@ -195,14 +198,17 @@ export default function Home() {
               <div className="bg-secondary col-span-1 row-span-1 sm:row-span-2 px-3 sm:px-5 py-3 sm:py-5">
                 <div className="text-white text-xs sm:text-sm text-center">
                   <h2 className="text-center font-semibold text-sm sm:text-base">
-                    Region A
+                    Region B
                   </h2>
                   <ul className="">
-                    <li className="text-center">Leo Club of Baddegama</li>
-                    <li className="text-center">Leo Club of Baddegama</li>
-                    <li className="text-center">Leo Club of Baddegama</li>
-                    <li className="text-center">Leo Club of Baddegama</li>
-                    <li className="text-center">Leo Club of Baddegama</li>
+                   <li className="text-center">Leo Club of Matara Nilwala</li>
+<                 li className="text-center">Leo Club of St Thomas's College Matara</li>
+                  <li className="text-center">Leo Club of Galle Fort</li>
+<li className="text-center">Leo Club of Deniyaya</li>
+<li className="text-center">Leo Club of Kataragama Bogahapelessa</li>
+<li className="text-center">Leo Club of Uragasmanhandiya</li>
+<li className="text-center">Leo Club of Galle</li>
+<li className="text-center">Leo Club of Matara Marians</li>
                   </ul>
                 </div>
               </div>
@@ -290,11 +296,11 @@ export default function Home() {
             </div>
             <div className="pl-0 md:pl-8 h-[220px] sm:h-[260px] md:h-[300px] order-1 md:order-2">
               <Image
-                src={`${basePath}/carousel_images/carouselImage1.jpg`}
+                src={`${basePath}/district_logo.png`}
                 alt="MD Map"
-                width={600}
-                height={600}
-                className="w-full h-full object-cover rounded-2xl"
+                width={500}
+                height={400}
+                className="w-half h-half object-cover rounded-2xl"
               />
             </div>
           </div>
